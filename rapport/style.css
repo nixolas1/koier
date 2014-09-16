@@ -1,0 +1,71 @@
+body {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    margin:0;
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+p {
+    max-width: 666px; /* kortere linjer for bedre lesbarhet */
+    font-size: 14px;
+    margin: auto;
+    padding-top: 10px;
+} 
+
+.crop{
+    overflow: hidden;
+    margin: 40px 0;
+}
+.mainpic{
+    min-height: 400px;
+    display: block;
+    margin: -80px auto;
+}
+
+.topbar,.navbar {
+    width: 100%;
+    background-color: #F7F7F7;
+    text-align: center;
+    border-bottom: solid 8px #CD2;
+    font-size: 40px;
+}
+
+.navbar{
+    font-size: 13px;
+    padding: 11px;
+    float: left;
+    border-bottom-color: #f30;
+    width: 10%;
+    margin: 0 15px 0 0;
+    list-style: none;
+    min-width: 100px;
+}
+
+.navbar a, .topbar a {
+    display: table-cell;
+    text-decoration: none;
+    color: #444;
+    padding: 4px 0 4px 0;
+    border-bottom: solid 1px #ccc;
+
+}
+
+.topbar a{
+    display: -webkit-inline-box;
+    font-size: 20px;
+    margin: 0 13%;
+    border-bottom: none;
+    font-weight: 400;
+}
+
+.navbar a:hover {
+    font-weight: bold;
+}
+
+.topbar a:hover{
+    color:#0CF;
+}
