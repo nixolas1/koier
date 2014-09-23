@@ -1,0 +1,22 @@
+REFERAT  tirsdag 9. september
+
+OPPMØTTE: Marcus, Nicolas, Ingrid, Eirik
+
+Møte etter veiledning med studass
+
+- Format på systemet: Nettside fremfor java, PHP som språk
+
+- Ingrid, Brang og Eirik må lære seg Git
+
+- Alle må ha fokus på å lage diagrammer, viktig med forståelse av systemet for dette
+
+- Omformulere oppgaven til brukerhistorier
+
+- Bruke excel til scrum-board
+
+- Fikse timeliste (en stor timeliste for alle, i excel)
+
+- Oppgave til torsdag: lese ferdig scrum-bok, sette seg inn i diagrammer
+
+- NESTE MØTE: Torsdag 11. september...
+

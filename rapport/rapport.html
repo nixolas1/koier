@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../static/style.css">
         <title>Rapportering</title>
     </head>
     <body>
@@ -21,10 +21,11 @@
             <p>
 				Tekstfelt:
             </p>
-            <textarea name="rapport" rows="4" cols="50" method="post">Rapporter følgende:
+			<form action="send.php" method="post">
+            <textarea name="rapport" rows="4" cols="50">Rapporter følgende:
 	- </textarea>
 			<p>
-			<button onclick="location.href = 'send.php';" type="button">Send</button> 
+			<input type="submit"> 
 			</p>
         </div>
     </body>

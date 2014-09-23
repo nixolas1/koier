@@ -1,19 +1,30 @@
 <?php 
-
 if(isset($_POST["username"])){
+
+    include("db.php");
+
     $user=$_POST["username"];
-    $pass=sha1($_POST["password"]);
-    if($user=="admin" && $pass=="3fb25fd34450023519526097fa43b429102bc577"){
-        session_start(); 
-        $_SESSION['loggedin']=1;
-        header("location: koie.php");
-    }else{
-        //echo("user: ".$_POST["username"]." pass:".sha1($_POST["password"]));
+    $pass=$_POST["password"];
+
+    $qry="SELECT * FROM  `user` WHERE  `user` = '$user'";
+    $result=mysql_query($qry);
+    $row = mysql_fetch_array($result, MYSQL_ASSOC); 
+    if($row){
+        if (password_verify($pass, $row["password"])) {
+            session_start(); 
+            $_SESSION['loggedin']=1;
+            header("location: kart.php");
+        }
     }
+
 }
 else if(isset($_GET["logout"])){
     session_start(); 
     session_destroy(); 
+}
+else if(isset($_GET["new"])){
+    $options = array('cost' => 5);
+    echo password_hash($_GET["new"], PASSWORD_BCRYPT, $options);
 }
 
 
@@ -25,7 +36,7 @@ else if(isset($_GET["logout"])){
         <title>Koier</title>
     </head>
     <body>
-            <div class="topbar">Koier Admin Login</div>
+            <div class="topbar">Koie Admin Login</div>
             
             <div class="container">
             	<center>
@@ -35,7 +46,7 @@ else if(isset($_GET["logout"])){
                         }
                         ?>
                          <div class="form-group">
-                            <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+                            <input autofocus type="text" class="form-control" id="username" name="username" placeholder="Enter username">
                           </div>
                           <div class="form-group">
                             <input type="password" class="form-control" id="password"name="password" placeholder="Password">
